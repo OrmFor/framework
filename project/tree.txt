@@ -1,0 +1,597 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] parent
+[INFO] core
+[INFO] web
+[INFO] quartz
+[INFO] app
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building parent 1.0.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ parent ---
+[INFO] com.yinmimoney.web:parent:pom:1.0.0-SNAPSHOT
+[INFO] +- org.apache.geronimo.specs:geronimo-servlet_3.0_spec:jar:1.0:provided
+[INFO] +- cc.s2m.web.utils:webUtils:jar:20160314-SNAPSHOT:compile
+[INFO] |  +- cc.s2m:util:jar:20160314-SNAPSHOT:compile
+[INFO] |  |  +- com.belerweb:pinyin4j:jar:2.5.0:compile
+[INFO] |  |  +- org.apache.httpcomponents:httpclient:jar:4.5.2:compile
+[INFO] |  |  +- org.apache.httpcomponents:httpcore:jar:4.4.4:compile
+[INFO] |  |  +- org.apache.httpcomponents:httpmime:jar:4.5.2:compile
+[INFO] |  |  +- org.htmlparser:htmlparser:jar:2.1:compile
+[INFO] |  |  |  \- org.htmlparser:htmllexer:jar:2.1:compile
+[INFO] |  |  +- com.alibaba:fastjson:jar:1.2.8:compile
+[INFO] |  |  +- com.google.guava:guava:jar:19.0:compile
+[INFO] |  |  +- commons-io:commons-io:jar:2.4:compile
+[INFO] |  |  +- commons-beanutils:commons-beanutils:jar:1.9.2:compile
+[INFO] |  |  +- commons-logging:commons-logging:jar:1.2:compile
+[INFO] |  |  \- org.apache.commons:commons-collections4:jar:4.1:compile
+[INFO] |  +- org.springframework:spring-core:jar:4.2.4.RELEASE:compile
+[INFO] |  +- org.springframework:spring-context:jar:4.2.4.RELEASE:compile
+[INFO] |  |  +- org.springframework:spring-aop:jar:4.2.4.RELEASE:compile
+[INFO] |  |  |  \- aopalliance:aopalliance:jar:1.0:compile
+[INFO] |  |  +- org.springframework:spring-beans:jar:4.2.4.RELEASE:compile
+[INFO] |  |  \- org.springframework:spring-expression:jar:4.2.4.RELEASE:compile
+[INFO] |  +- org.springframework:spring-web:jar:4.2.4.RELEASE:compile
+[INFO] |  +- org.springframework:spring-orm:jar:4.2.4.RELEASE:compile
+[INFO] |  |  +- org.springframework:spring-jdbc:jar:4.2.4.RELEASE:compile
+[INFO] |  |  \- org.springframework:spring-tx:jar:4.2.4.RELEASE:compile
+[INFO] |  +- org.springframework:spring-webmvc:jar:4.2.4.RELEASE:compile
+[INFO] |  +- org.springframework:spring-context-support:jar:4.2.4.RELEASE:compile
+[INFO] |  +- org.apache.logging.log4j:log4j-core:jar:2.5:compile
+[INFO] |  +- org.apache.logging.log4j:log4j-api:jar:2.5:compile
+[INFO] |  +- org.apache.logging.log4j:log4j-jcl:jar:2.5:compile
+[INFO] |  +- org.apache.logging.log4j:log4j-web:jar:2.5:compile
+[INFO] |  +- mysql:mysql-connector-java:jar:5.1.38:compile
+[INFO] |  +- org.aspectj:aspectjweaver:jar:1.8.8:compile
+[INFO] |  +- org.mybatis:mybatis:jar:3.3.0:compile
+[INFO] |  +- org.mybatis:mybatis-spring:jar:1.2.3:compile
+[INFO] |  +- org.javassist:javassist:jar:3.20.0-GA:compile
+[INFO] |  +- com.alibaba:druid:jar:1.0.16:compile
+[INFO] |  |  +- com.alibaba:jconsole:jar:1.8.0:system
+[INFO] |  |  \- com.alibaba:tools:jar:1.8.0:system
+[INFO] |  +- org.freemarker:freemarker:jar:2.3.23:compile
+[INFO] |  +- commons-fileupload:commons-fileupload:jar:1.3.1:compile
+[INFO] |  +- org.apache.commons:commons-lang3:jar:3.4:compile
+[INFO] |  +- cglib:cglib:jar:3.2.0:compile
+[INFO] |  |  \- org.ow2.asm:asm:jar:5.0.3:compile
+[INFO] |  +- org.apache.ant:ant:jar:1.9.6:compile
+[INFO] |  |  \- org.apache.ant:ant-launcher:jar:1.9.6:compile
+[INFO] |  +- com.upyun:java-sdk:jar:3.1:compile
+[INFO] |  +- junit:junit:jar:4.12:compile
+[INFO] |  |  \- org.hamcrest:hamcrest-core:jar:1.3:compile
+[INFO] |  +- net.spy:spymemcached:jar:2.12.0:compile
+[INFO] |  \- org.apache.poi:poi-ooxml:jar:3.14:compile
+[INFO] |     +- org.apache.poi:poi-ooxml-schemas:jar:3.14:compile
+[INFO] |     |  \- org.apache.xmlbeans:xmlbeans:jar:2.6.0:compile
+[INFO] |     |     \- stax:stax-api:jar:1.0.1:compile
+[INFO] |     \- com.github.virtuald:curvesapi:jar:1.03:compile
+[INFO] +- com.sun.mail:javax.mail:jar:1.5.5:compile
+[INFO] +- javax.activation:activation:jar:1.1.1:compile
+[INFO] +- com.itextpdf:itextpdf:jar:5.5.8:compile
+[INFO] +- cc.s2m.utils:itextpdf_xmlworker_5.5.8:jar:0.0.1-SNAPSHOT:compile
+[INFO] +- com.itextpdf:itext-asian:jar:5.2.0:compile
+[INFO] +- org.apache.poi:poi:jar:3.13:compile
+[INFO] |  \- commons-codec:commons-codec:jar:1.9:compile
+[INFO] +- io.netty:netty-all:jar:4.1.6.Final:compile
+[INFO] +- com.google.code.gson:gson:jar:2.3:compile
+[INFO] +- org.slf4j:slf4j-api:jar:1.7.7:compile
+[INFO] +- org.slf4j:slf4j-log4j12:jar:1.7.7:compile
+[INFO] \- log4j:log4j:jar:1.2.17:compile
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building core 1.0.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ core ---
+[INFO] com.yinmimoney.web:core:jar:1.0.0-SNAPSHOT
+[INFO] +- org.springframework.data:spring-data-redis:jar:1.7.1.RELEASE:compile
+[INFO] |  +- org.springframework.data:spring-data-keyvalue:jar:1.1.1.RELEASE:compile
+[INFO] |  |  \- org.springframework.data:spring-data-commons:jar:1.12.1.RELEASE:compile
+[INFO] |  +- org.springframework:spring-tx:jar:4.2.5.RELEASE:compile
+[INFO] |  |  \- org.springframework:spring-beans:jar:4.2.5.RELEASE:compile
+[INFO] |  +- org.springframework:spring-oxm:jar:4.2.5.RELEASE:compile
+[INFO] |  +- org.springframework:spring-aop:jar:4.2.5.RELEASE:compile
+[INFO] |  |  \- aopalliance:aopalliance:jar:1.0:compile
+[INFO] |  +- org.springframework:spring-context-support:jar:4.2.5.RELEASE:compile
+[INFO] |  \- org.slf4j:jcl-over-slf4j:jar:1.7.19:runtime
+[INFO] +- redis.clients:jedis:jar:2.5.2:compile
+[INFO] |  \- org.apache.commons:commons-pool2:jar:2.0:compile
+[INFO] +- org.hibernate:hibernate-validator:jar:5.0.2.Final:compile
+[INFO] |  +- javax.validation:validation-api:jar:1.1.0.Final:compile
+[INFO] |  +- org.jboss.logging:jboss-logging:jar:3.1.1.GA:compile
+[INFO] |  \- com.fasterxml:classmate:jar:1.0.0:compile
+[INFO] +- commons-httpclient:commons-httpclient:jar:3.1:compile
+[INFO] |  +- commons-logging:commons-logging:jar:1.0.4:compile
+[INFO] |  \- commons-codec:commons-codec:jar:1.2:compile
+[INFO] +- junit:junit:jar:4.8:test
+[INFO] +- org.springframework:spring-test:jar:3.1.2.RELEASE:provided
+[INFO] +- org.springframework:spring-core:jar:4.2.4.RELEASE:provided
+[INFO] +- org.web3j:core:jar:3.3.1:compile
+[INFO] |  +- org.web3j:abi:jar:3.3.1:compile
+[INFO] |  |  \- org.web3j:utils:jar:3.3.1:compile
+[INFO] |  |     \- org.bouncycastle:bcprov-jdk15on:jar:1.54:compile
+[INFO] |  +- org.web3j:crypto:jar:3.3.1:compile
+[INFO] |  |  +- org.web3j:rlp:jar:3.3.1:compile
+[INFO] |  |  \- com.fasterxml.jackson.core:jackson-databind:jar:2.8.5:compile
+[INFO] |  |     +- com.fasterxml.jackson.core:jackson-annotations:jar:2.8.0:compile
+[INFO] |  |     \- com.fasterxml.jackson.core:jackson-core:jar:2.8.5:compile
+[INFO] |  +- org.web3j:tuples:jar:3.3.1:compile
+[INFO] |  +- com.github.jnr:jnr-unixsocket:jar:0.15:compile
+[INFO] |  |  +- com.github.jnr:jnr-ffi:jar:2.1.2:compile
+[INFO] |  |  |  +- com.github.jnr:jffi:jar:1.2.14:compile
+[INFO] |  |  |  +- com.github.jnr:jffi:jar:native:1.2.14:runtime
+[INFO] |  |  |  +- org.ow2.asm:asm-commons:jar:5.0.3:compile
+[INFO] |  |  |  +- org.ow2.asm:asm-analysis:jar:5.0.3:compile
+[INFO] |  |  |  +- org.ow2.asm:asm-tree:jar:5.0.3:compile
+[INFO] |  |  |  +- org.ow2.asm:asm-util:jar:5.0.3:compile
+[INFO] |  |  |  \- com.github.jnr:jnr-x86asm:jar:1.0.2:compile
+[INFO] |  |  +- com.github.jnr:jnr-constants:jar:0.9.6:compile
+[INFO] |  |  +- com.github.jnr:jnr-enxio:jar:0.14:compile
+[INFO] |  |  \- com.github.jnr:jnr-posix:jar:3.0.33:compile
+[INFO] |  +- com.squareup.okhttp3:okhttp:jar:3.8.1:compile
+[INFO] |  |  \- com.squareup.okio:okio:jar:1.13.0:compile
+[INFO] |  +- com.squareup.okhttp3:logging-interceptor:jar:3.8.1:compile
+[INFO] |  \- io.reactivex:rxjava:jar:1.2.4:compile
+[INFO] +- org.apache.geronimo.specs:geronimo-servlet_3.0_spec:jar:1.0:provided
+[INFO] +- cc.s2m.web.utils:webUtils:jar:20160314-SNAPSHOT:compile
+[INFO] |  +- cc.s2m:util:jar:20160314-SNAPSHOT:compile
+[INFO] |  |  +- com.belerweb:pinyin4j:jar:2.5.0:compile
+[INFO] |  |  +- org.apache.httpcomponents:httpclient:jar:4.5.2:compile
+[INFO] |  |  +- org.apache.httpcomponents:httpcore:jar:4.4.4:compile
+[INFO] |  |  +- org.apache.httpcomponents:httpmime:jar:4.5.2:compile
+[INFO] |  |  +- org.htmlparser:htmlparser:jar:2.1:compile
+[INFO] |  |  |  \- org.htmlparser:htmllexer:jar:2.1:compile
+[INFO] |  |  +- com.alibaba:fastjson:jar:1.2.8:compile
+[INFO] |  |  +- com.google.guava:guava:jar:19.0:compile
+[INFO] |  |  +- commons-io:commons-io:jar:2.4:compile
+[INFO] |  |  +- commons-beanutils:commons-beanutils:jar:1.9.2:compile
+[INFO] |  |  \- org.apache.commons:commons-collections4:jar:4.1:compile
+[INFO] |  +- org.springframework:spring-context:jar:4.2.4.RELEASE:compile
+[INFO] |  |  \- org.springframework:spring-expression:jar:4.2.4.RELEASE:compile
+[INFO] |  +- org.springframework:spring-web:jar:4.2.4.RELEASE:compile
+[INFO] |  +- org.springframework:spring-orm:jar:4.2.4.RELEASE:compile
+[INFO] |  |  \- org.springframework:spring-jdbc:jar:4.2.4.RELEASE:compile
+[INFO] |  +- org.springframework:spring-webmvc:jar:4.2.4.RELEASE:compile
+[INFO] |  +- org.apache.logging.log4j:log4j-core:jar:2.5:compile
+[INFO] |  +- org.apache.logging.log4j:log4j-api:jar:2.5:compile
+[INFO] |  +- org.apache.logging.log4j:log4j-jcl:jar:2.5:compile
+[INFO] |  +- org.apache.logging.log4j:log4j-web:jar:2.5:compile
+[INFO] |  +- mysql:mysql-connector-java:jar:5.1.38:compile
+[INFO] |  +- org.aspectj:aspectjweaver:jar:1.8.8:compile
+[INFO] |  +- org.mybatis:mybatis:jar:3.3.0:compile
+[INFO] |  +- org.mybatis:mybatis-spring:jar:1.2.3:compile
+[INFO] |  +- org.javassist:javassist:jar:3.20.0-GA:compile
+[INFO] |  +- com.alibaba:druid:jar:1.0.16:compile
+[INFO] |  |  +- com.alibaba:jconsole:jar:1.8.0:system
+[INFO] |  |  \- com.alibaba:tools:jar:1.8.0:system
+[INFO] |  +- org.freemarker:freemarker:jar:2.3.23:compile
+[INFO] |  +- commons-fileupload:commons-fileupload:jar:1.3.1:compile
+[INFO] |  +- org.apache.commons:commons-lang3:jar:3.4:compile
+[INFO] |  +- cglib:cglib:jar:3.2.0:compile
+[INFO] |  |  \- org.ow2.asm:asm:jar:5.0.3:compile
+[INFO] |  +- org.apache.ant:ant:jar:1.9.6:compile
+[INFO] |  |  \- org.apache.ant:ant-launcher:jar:1.9.6:compile
+[INFO] |  +- com.upyun:java-sdk:jar:3.1:compile
+[INFO] |  +- net.spy:spymemcached:jar:2.12.0:compile
+[INFO] |  \- org.apache.poi:poi-ooxml:jar:3.14:compile
+[INFO] |     +- org.apache.poi:poi-ooxml-schemas:jar:3.14:compile
+[INFO] |     |  \- org.apache.xmlbeans:xmlbeans:jar:2.6.0:compile
+[INFO] |     |     \- stax:stax-api:jar:1.0.1:compile
+[INFO] |     \- com.github.virtuald:curvesapi:jar:1.03:compile
+[INFO] +- com.sun.mail:javax.mail:jar:1.5.5:compile
+[INFO] +- javax.activation:activation:jar:1.1.1:compile
+[INFO] +- com.itextpdf:itextpdf:jar:5.5.8:compile
+[INFO] +- cc.s2m.utils:itextpdf_xmlworker_5.5.8:jar:0.0.1-SNAPSHOT:compile
+[INFO] +- com.itextpdf:itext-asian:jar:5.2.0:compile
+[INFO] +- org.apache.poi:poi:jar:3.13:compile
+[INFO] +- io.netty:netty-all:jar:4.1.6.Final:compile
+[INFO] +- com.google.code.gson:gson:jar:2.3:compile
+[INFO] +- org.slf4j:slf4j-api:jar:1.7.7:compile
+[INFO] +- org.slf4j:slf4j-log4j12:jar:1.7.7:compile
+[INFO] \- log4j:log4j:jar:1.2.17:compile
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building web 1.0.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+Downloading: http://121.199.31.50:8081/content/groups/public/com/yinmimoney/web/core/1.0.0-SNAPSHOT/maven-metadata.xml
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ web ---
+[INFO] com.yinmimoney.web:web:war:1.0.0-SNAPSHOT
+[INFO] +- com.yinmimoney.web:core:jar:1.0.0-SNAPSHOT:compile
+[INFO] |  +- org.hibernate:hibernate-validator:jar:5.0.2.Final:compile
+[INFO] |  |  +- javax.validation:validation-api:jar:1.1.0.Final:compile
+[INFO] |  |  +- org.jboss.logging:jboss-logging:jar:3.1.1.GA:compile
+[INFO] |  |  \- com.fasterxml:classmate:jar:1.0.0:compile
+[INFO] |  +- commons-httpclient:commons-httpclient:jar:3.1:compile
+[INFO] |  \- org.web3j:core:jar:3.3.1:compile
+[INFO] |     +- org.web3j:abi:jar:3.3.1:compile
+[INFO] |     |  \- org.web3j:utils:jar:3.3.1:compile
+[INFO] |     |     \- org.bouncycastle:bcprov-jdk15on:jar:1.54:compile
+[INFO] |     +- org.web3j:crypto:jar:3.3.1:compile
+[INFO] |     |  +- org.web3j:rlp:jar:3.3.1:compile
+[INFO] |     |  \- com.fasterxml.jackson.core:jackson-databind:jar:2.8.5:compile
+[INFO] |     |     +- com.fasterxml.jackson.core:jackson-annotations:jar:2.8.0:compile
+[INFO] |     |     \- com.fasterxml.jackson.core:jackson-core:jar:2.8.5:compile
+[INFO] |     +- org.web3j:tuples:jar:3.3.1:compile
+[INFO] |     +- com.github.jnr:jnr-unixsocket:jar:0.15:compile
+[INFO] |     |  +- com.github.jnr:jnr-ffi:jar:2.1.2:compile
+[INFO] |     |  |  +- com.github.jnr:jffi:jar:1.2.14:compile
+[INFO] |     |  |  +- com.github.jnr:jffi:jar:native:1.2.14:runtime
+[INFO] |     |  |  +- org.ow2.asm:asm-commons:jar:5.0.3:compile
+[INFO] |     |  |  +- org.ow2.asm:asm-analysis:jar:5.0.3:compile
+[INFO] |     |  |  +- org.ow2.asm:asm-tree:jar:5.0.3:compile
+[INFO] |     |  |  +- org.ow2.asm:asm-util:jar:5.0.3:compile
+[INFO] |     |  |  \- com.github.jnr:jnr-x86asm:jar:1.0.2:compile
+[INFO] |     |  +- com.github.jnr:jnr-constants:jar:0.9.6:compile
+[INFO] |     |  +- com.github.jnr:jnr-enxio:jar:0.14:compile
+[INFO] |     |  \- com.github.jnr:jnr-posix:jar:3.0.33:compile
+[INFO] |     +- com.squareup.okhttp3:okhttp:jar:3.8.1:compile
+[INFO] |     |  \- com.squareup.okio:okio:jar:1.13.0:compile
+[INFO] |     +- com.squareup.okhttp3:logging-interceptor:jar:3.8.1:compile
+[INFO] |     \- io.reactivex:rxjava:jar:1.2.4:compile
+[INFO] +- cc.s2m:open-all-one:jar:2015.12.24-SNAPSHOT:compile
+[INFO] |  +- commons-logging:commons-logging:jar:1.2:compile
+[INFO] |  +- cc.s2m:util:jar:20160314-SNAPSHOT:compile
+[INFO] |  |  +- com.belerweb:pinyin4j:jar:2.5.0:compile
+[INFO] |  |  +- org.apache.httpcomponents:httpclient:jar:4.5.2:compile
+[INFO] |  |  +- org.apache.httpcomponents:httpcore:jar:4.4.4:compile
+[INFO] |  |  +- org.apache.httpcomponents:httpmime:jar:4.5.2:compile
+[INFO] |  |  +- org.htmlparser:htmlparser:jar:2.1:compile
+[INFO] |  |  |  \- org.htmlparser:htmllexer:jar:2.1:compile
+[INFO] |  |  +- com.alibaba:fastjson:jar:1.2.8:compile
+[INFO] |  |  +- com.google.guava:guava:jar:19.0:compile
+[INFO] |  |  +- commons-io:commons-io:jar:2.4:compile
+[INFO] |  |  +- commons-beanutils:commons-beanutils:jar:1.9.2:compile
+[INFO] |  |  \- org.apache.commons:commons-collections4:jar:4.1:compile
+[INFO] |  +- org.apache.commons:commons-lang3:jar:3.4:compile
+[INFO] |  +- dom4j:dom4j:jar:1.6.1:compile
+[INFO] |  \- xml-apis:xml-apis:jar:1.0.b2:compile
+[INFO] +- org.springframework:spring-test:jar:4.2.6.RELEASE:test
+[INFO] |  \- org.springframework:spring-core:jar:4.2.6.RELEASE:compile
+[INFO] +- org.springframework.data:spring-data-redis:jar:1.7.1.RELEASE:compile
+[INFO] |  +- org.springframework.data:spring-data-keyvalue:jar:1.1.1.RELEASE:compile
+[INFO] |  |  \- org.springframework.data:spring-data-commons:jar:1.12.1.RELEASE:compile
+[INFO] |  +- org.springframework:spring-tx:jar:4.2.5.RELEASE:compile
+[INFO] |  |  \- org.springframework:spring-beans:jar:4.2.5.RELEASE:compile
+[INFO] |  +- org.springframework:spring-oxm:jar:4.2.5.RELEASE:compile
+[INFO] |  +- org.springframework:spring-aop:jar:4.2.5.RELEASE:compile
+[INFO] |  |  \- aopalliance:aopalliance:jar:1.0:compile
+[INFO] |  +- org.springframework:spring-context-support:jar:4.2.5.RELEASE:compile
+[INFO] |  \- org.slf4j:jcl-over-slf4j:jar:1.7.19:runtime
+[INFO] +- redis.clients:jedis:jar:2.5.2:compile
+[INFO] |  \- org.apache.commons:commons-pool2:jar:2.0:compile
+[INFO] +- cn.edu.hfut.dmic.webcollector:WebCollector:jar:2.52:compile
+[INFO] |  +- org.jsoup:jsoup:jar:1.9.2:compile
+[INFO] |  +- com.googlecode.juniversalchardet:juniversalchardet:jar:1.0.3:compile
+[INFO] |  +- junit:junit:jar:4.11:compile
+[INFO] |  |  \- org.hamcrest:hamcrest-core:jar:1.3:compile
+[INFO] |  +- org.json:json:jar:20140107:compile
+[INFO] |  +- com.sleepycat:je:jar:5.0.73:compile
+[INFO] |  +- mysql:mysql-connector-java:jar:5.1.40:compile
+[INFO] |  +- org.springframework:spring-jdbc:jar:4.3.5.RELEASE:compile
+[INFO] |  \- commons-dbcp:commons-dbcp:jar:1.4:compile
+[INFO] |     \- commons-pool:commons-pool:jar:1.5.4:compile
+[INFO] +- org.apache.geronimo.specs:geronimo-servlet_3.0_spec:jar:1.0:provided
+[INFO] +- cc.s2m.web.utils:webUtils:jar:20160314-SNAPSHOT:compile
+[INFO] |  +- org.springframework:spring-context:jar:4.2.4.RELEASE:compile
+[INFO] |  |  \- org.springframework:spring-expression:jar:4.2.4.RELEASE:compile
+[INFO] |  +- org.springframework:spring-web:jar:4.2.4.RELEASE:compile
+[INFO] |  +- org.springframework:spring-orm:jar:4.2.4.RELEASE:compile
+[INFO] |  +- org.springframework:spring-webmvc:jar:4.2.4.RELEASE:compile
+[INFO] |  +- org.apache.logging.log4j:log4j-core:jar:2.5:compile
+[INFO] |  +- org.apache.logging.log4j:log4j-api:jar:2.5:compile
+[INFO] |  +- org.apache.logging.log4j:log4j-jcl:jar:2.5:compile
+[INFO] |  +- org.apache.logging.log4j:log4j-web:jar:2.5:compile
+[INFO] |  +- org.aspectj:aspectjweaver:jar:1.8.8:compile
+[INFO] |  +- org.mybatis:mybatis:jar:3.3.0:compile
+[INFO] |  +- org.mybatis:mybatis-spring:jar:1.2.3:compile
+[INFO] |  +- org.javassist:javassist:jar:3.20.0-GA:compile
+[INFO] |  +- com.alibaba:druid:jar:1.0.16:compile
+[INFO] |  |  +- com.alibaba:jconsole:jar:1.8.0:system
+[INFO] |  |  \- com.alibaba:tools:jar:1.8.0:system
+[INFO] |  +- org.freemarker:freemarker:jar:2.3.23:compile
+[INFO] |  +- commons-fileupload:commons-fileupload:jar:1.3.1:compile
+[INFO] |  +- cglib:cglib:jar:3.2.0:compile
+[INFO] |  |  \- org.ow2.asm:asm:jar:5.0.3:compile
+[INFO] |  +- org.apache.ant:ant:jar:1.9.6:compile
+[INFO] |  |  \- org.apache.ant:ant-launcher:jar:1.9.6:compile
+[INFO] |  +- com.upyun:java-sdk:jar:3.1:compile
+[INFO] |  +- net.spy:spymemcached:jar:2.12.0:compile
+[INFO] |  \- org.apache.poi:poi-ooxml:jar:3.14:compile
+[INFO] |     +- org.apache.poi:poi-ooxml-schemas:jar:3.14:compile
+[INFO] |     |  \- org.apache.xmlbeans:xmlbeans:jar:2.6.0:compile
+[INFO] |     |     \- stax:stax-api:jar:1.0.1:compile
+[INFO] |     \- com.github.virtuald:curvesapi:jar:1.03:compile
+[INFO] +- com.sun.mail:javax.mail:jar:1.5.5:compile
+[INFO] +- javax.activation:activation:jar:1.1.1:compile
+[INFO] +- com.itextpdf:itextpdf:jar:5.5.8:compile
+[INFO] +- cc.s2m.utils:itextpdf_xmlworker_5.5.8:jar:0.0.1-SNAPSHOT:compile
+[INFO] +- com.itextpdf:itext-asian:jar:5.2.0:compile
+[INFO] +- org.apache.poi:poi:jar:3.13:compile
+[INFO] |  \- commons-codec:commons-codec:jar:1.9:compile
+[INFO] +- io.netty:netty-all:jar:4.1.6.Final:compile
+[INFO] +- com.google.code.gson:gson:jar:2.3:compile
+[INFO] +- org.slf4j:slf4j-api:jar:1.7.7:compile
+[INFO] +- org.slf4j:slf4j-log4j12:jar:1.7.7:compile
+[INFO] \- log4j:log4j:jar:1.2.17:compile
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building quartz 1.0.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ quartz ---
+[INFO] com.yinmimoney.web:quartz:war:1.0.0-SNAPSHOT
+[INFO] +- org.bouncycastle:bcmail-jdk15on:jar:1.49:compile
+[INFO] +- org.bouncycastle:bcpkix-jdk15on:jar:1.48:compile
+[INFO] +- org.bouncycastle:bcprov-jdk15on:jar:1.48:compile
+[INFO] +- commons-configuration:commons-configuration:jar:1.6:compile
+[INFO] |  +- commons-collections:commons-collections:jar:3.2.1:compile
+[INFO] |  +- commons-lang:commons-lang:jar:2.4:compile
+[INFO] |  +- commons-logging:commons-logging:jar:1.1.1:compile
+[INFO] |  +- commons-digester:commons-digester:jar:1.8:compile
+[INFO] |  \- commons-beanutils:commons-beanutils-core:jar:1.8.0:compile
+[INFO] +- commons-codec:commons-codec:jar:1.9:compile
+[INFO] +- commons-httpclient:commons-httpclient:jar:3.1:compile
+[INFO] +- com.google.code.gson:gson:jar:2.2.4:compile
+[INFO] +- net.sf.json-lib:json-lib:jar:jdk15:2.4:compile
+[INFO] |  +- commons-beanutils:commons-beanutils:jar:1.8.0:compile
+[INFO] |  \- net.sf.ezmorph:ezmorph:jar:1.0.6:compile
+[INFO] +- com.timevale.esign:tgtext:jar:2.0.1:compile
+[INFO] +- fakepath:utils:jar:1.0.1:compile
+[INFO] +- org.slf4j:slf4j-api:jar:1.7.5:compile
+[INFO] +- org.slf4j:slf4j-log4j12:jar:1.7.5:compile
+[INFO] +- com.yinmimoney.web:core:jar:1.0.0-SNAPSHOT:compile
+[INFO] |  +- org.hibernate:hibernate-validator:jar:5.0.2.Final:compile
+[INFO] |  |  +- javax.validation:validation-api:jar:1.1.0.Final:compile
+[INFO] |  |  +- org.jboss.logging:jboss-logging:jar:3.1.1.GA:compile
+[INFO] |  |  \- com.fasterxml:classmate:jar:1.0.0:compile
+[INFO] |  \- org.web3j:core:jar:3.3.1:compile
+[INFO] |     +- org.web3j:abi:jar:3.3.1:compile
+[INFO] |     |  \- org.web3j:utils:jar:3.3.1:compile
+[INFO] |     +- org.web3j:crypto:jar:3.3.1:compile
+[INFO] |     |  +- org.web3j:rlp:jar:3.3.1:compile
+[INFO] |     |  \- com.fasterxml.jackson.core:jackson-databind:jar:2.8.5:compile
+[INFO] |     |     +- com.fasterxml.jackson.core:jackson-annotations:jar:2.8.0:compile
+[INFO] |     |     \- com.fasterxml.jackson.core:jackson-core:jar:2.8.5:compile
+[INFO] |     +- org.web3j:tuples:jar:3.3.1:compile
+[INFO] |     +- com.github.jnr:jnr-unixsocket:jar:0.15:compile
+[INFO] |     |  +- com.github.jnr:jnr-ffi:jar:2.1.2:compile
+[INFO] |     |  |  +- com.github.jnr:jffi:jar:1.2.14:compile
+[INFO] |     |  |  +- com.github.jnr:jffi:jar:native:1.2.14:runtime
+[INFO] |     |  |  +- org.ow2.asm:asm-commons:jar:5.0.3:compile
+[INFO] |     |  |  +- org.ow2.asm:asm-analysis:jar:5.0.3:compile
+[INFO] |     |  |  +- org.ow2.asm:asm-tree:jar:5.0.3:compile
+[INFO] |     |  |  +- org.ow2.asm:asm-util:jar:5.0.3:compile
+[INFO] |     |  |  \- com.github.jnr:jnr-x86asm:jar:1.0.2:compile
+[INFO] |     |  +- com.github.jnr:jnr-constants:jar:0.9.6:compile
+[INFO] |     |  +- com.github.jnr:jnr-enxio:jar:0.14:compile
+[INFO] |     |  \- com.github.jnr:jnr-posix:jar:3.0.33:compile
+[INFO] |     +- com.squareup.okhttp3:okhttp:jar:3.8.1:compile
+[INFO] |     |  \- com.squareup.okio:okio:jar:1.13.0:compile
+[INFO] |     +- com.squareup.okhttp3:logging-interceptor:jar:3.8.1:compile
+[INFO] |     \- io.reactivex:rxjava:jar:1.2.4:compile
+[INFO] +- org.springframework:spring-test:jar:4.2.6.RELEASE:test
+[INFO] |  \- org.springframework:spring-core:jar:4.2.6.RELEASE:compile
+[INFO] +- cc.s2m:open-all-one:jar:2015.12.24-SNAPSHOT:compile
+[INFO] |  +- cc.s2m:util:jar:20160314-SNAPSHOT:compile
+[INFO] |  |  +- com.belerweb:pinyin4j:jar:2.5.0:compile
+[INFO] |  |  +- org.apache.httpcomponents:httpclient:jar:4.5.2:compile
+[INFO] |  |  +- org.apache.httpcomponents:httpcore:jar:4.4.4:compile
+[INFO] |  |  +- org.apache.httpcomponents:httpmime:jar:4.5.2:compile
+[INFO] |  |  +- org.htmlparser:htmlparser:jar:2.1:compile
+[INFO] |  |  |  \- org.htmlparser:htmllexer:jar:2.1:compile
+[INFO] |  |  +- com.alibaba:fastjson:jar:1.2.8:compile
+[INFO] |  |  +- com.google.guava:guava:jar:19.0:compile
+[INFO] |  |  +- commons-io:commons-io:jar:2.4:compile
+[INFO] |  |  \- org.apache.commons:commons-collections4:jar:4.1:compile
+[INFO] |  +- org.apache.commons:commons-lang3:jar:3.4:compile
+[INFO] |  +- dom4j:dom4j:jar:1.6.1:compile
+[INFO] |  \- xml-apis:xml-apis:jar:1.0.b2:compile
+[INFO] +- org.springframework.data:spring-data-redis:jar:1.7.1.RELEASE:compile
+[INFO] |  +- org.springframework.data:spring-data-keyvalue:jar:1.1.1.RELEASE:compile
+[INFO] |  |  \- org.springframework.data:spring-data-commons:jar:1.12.1.RELEASE:compile
+[INFO] |  +- org.springframework:spring-tx:jar:4.2.5.RELEASE:compile
+[INFO] |  |  \- org.springframework:spring-beans:jar:4.2.5.RELEASE:compile
+[INFO] |  +- org.springframework:spring-oxm:jar:4.2.5.RELEASE:compile
+[INFO] |  +- org.springframework:spring-aop:jar:4.2.5.RELEASE:compile
+[INFO] |  |  \- aopalliance:aopalliance:jar:1.0:compile
+[INFO] |  +- org.springframework:spring-context-support:jar:4.2.5.RELEASE:compile
+[INFO] |  \- org.slf4j:jcl-over-slf4j:jar:1.7.19:runtime
+[INFO] +- redis.clients:jedis:jar:2.5.2:compile
+[INFO] |  \- org.apache.commons:commons-pool2:jar:2.0:compile
+[INFO] +- org.apache.geronimo.specs:geronimo-servlet_3.0_spec:jar:1.0:provided
+[INFO] +- cc.s2m.web.utils:webUtils:jar:20160314-SNAPSHOT:compile
+[INFO] |  +- org.springframework:spring-context:jar:4.2.4.RELEASE:compile
+[INFO] |  |  \- org.springframework:spring-expression:jar:4.2.4.RELEASE:compile
+[INFO] |  +- org.springframework:spring-web:jar:4.2.4.RELEASE:compile
+[INFO] |  +- org.springframework:spring-orm:jar:4.2.4.RELEASE:compile
+[INFO] |  |  \- org.springframework:spring-jdbc:jar:4.2.4.RELEASE:compile
+[INFO] |  +- org.springframework:spring-webmvc:jar:4.2.4.RELEASE:compile
+[INFO] |  +- org.apache.logging.log4j:log4j-core:jar:2.5:compile
+[INFO] |  +- org.apache.logging.log4j:log4j-api:jar:2.5:compile
+[INFO] |  +- org.apache.logging.log4j:log4j-jcl:jar:2.5:compile
+[INFO] |  +- org.apache.logging.log4j:log4j-web:jar:2.5:compile
+[INFO] |  +- mysql:mysql-connector-java:jar:5.1.38:compile
+[INFO] |  +- org.aspectj:aspectjweaver:jar:1.8.8:compile
+[INFO] |  +- org.mybatis:mybatis:jar:3.3.0:compile
+[INFO] |  +- org.mybatis:mybatis-spring:jar:1.2.3:compile
+[INFO] |  +- org.javassist:javassist:jar:3.20.0-GA:compile
+[INFO] |  +- com.alibaba:druid:jar:1.0.16:compile
+[INFO] |  |  +- com.alibaba:jconsole:jar:1.8.0:system
+[INFO] |  |  \- com.alibaba:tools:jar:1.8.0:system
+[INFO] |  +- org.freemarker:freemarker:jar:2.3.23:compile
+[INFO] |  +- commons-fileupload:commons-fileupload:jar:1.3.1:compile
+[INFO] |  +- cglib:cglib:jar:3.2.0:compile
+[INFO] |  |  \- org.ow2.asm:asm:jar:5.0.3:compile
+[INFO] |  +- org.apache.ant:ant:jar:1.9.6:compile
+[INFO] |  |  \- org.apache.ant:ant-launcher:jar:1.9.6:compile
+[INFO] |  +- com.upyun:java-sdk:jar:3.1:compile
+[INFO] |  +- junit:junit:jar:4.12:compile
+[INFO] |  |  \- org.hamcrest:hamcrest-core:jar:1.3:compile
+[INFO] |  +- net.spy:spymemcached:jar:2.12.0:compile
+[INFO] |  \- org.apache.poi:poi-ooxml:jar:3.14:compile
+[INFO] |     +- org.apache.poi:poi-ooxml-schemas:jar:3.14:compile
+[INFO] |     |  \- org.apache.xmlbeans:xmlbeans:jar:2.6.0:compile
+[INFO] |     |     \- stax:stax-api:jar:1.0.1:compile
+[INFO] |     \- com.github.virtuald:curvesapi:jar:1.03:compile
+[INFO] +- com.sun.mail:javax.mail:jar:1.5.5:compile
+[INFO] +- javax.activation:activation:jar:1.1.1:compile
+[INFO] +- com.itextpdf:itextpdf:jar:5.5.8:compile
+[INFO] +- cc.s2m.utils:itextpdf_xmlworker_5.5.8:jar:0.0.1-SNAPSHOT:compile
+[INFO] +- com.itextpdf:itext-asian:jar:5.2.0:compile
+[INFO] +- org.apache.poi:poi:jar:3.13:compile
+[INFO] +- io.netty:netty-all:jar:4.1.6.Final:compile
+[INFO] \- log4j:log4j:jar:1.2.17:compile
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building app 1.0.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+Downloading: http://121.199.31.50:8081/content/groups/public/org/springframework/spring-aspects/4.0.9.RELEASE/spring-aspects-4.0.9.RELEASE.pom
+Downloading: http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-aspects/4.0.9.RELEASE/spring-aspects-4.0.9.RELEASE.pom
+Progress (1): 1.0/3.2 kBProgress (1): 3.2 kB                        Downloaded: http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-aspects/4.0.9.RELEASE/spring-aspects-4.0.9.RELEASE.pom (3.2 kB at 4.3 kB/s)
+Downloading: http://121.199.31.50:8081/content/groups/public/org/springframework/spring-jdbc/4.0.9.RELEASE/spring-jdbc-4.0.9.RELEASE.pom
+Downloading: http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-jdbc/4.0.9.RELEASE/spring-jdbc-4.0.9.RELEASE.pom
+Progress (1): 3.5 kB                    Downloaded: http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-jdbc/4.0.9.RELEASE/spring-jdbc-4.0.9.RELEASE.pom (3.5 kB at 12 kB/s)
+Downloading: http://121.199.31.50:8081/content/groups/public/org/springframework/spring-aspects/4.0.9.RELEASE/spring-aspects-4.0.9.RELEASE.jar
+Downloading: http://121.199.31.50:8081/content/groups/public/org/springframework/spring-jdbc/4.0.9.RELEASE/spring-jdbc-4.0.9.RELEASE.jar
+Downloading: http://121.199.31.50:8081/content/groups/public/org/springframework/spring-tx/4.0.9.RELEASE/spring-tx-4.0.9.RELEASE.jar
+Downloading: http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-tx/4.0.9.RELEASE/spring-tx-4.0.9.RELEASE.jar
+Downloading: http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-aspects/4.0.9.RELEASE/spring-aspects-4.0.9.RELEASE.jar
+Downloading: http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-jdbc/4.0.9.RELEASE/spring-jdbc-4.0.9.RELEASE.jar
+Progress (1): 1.0/248 kBProgress (1): 5.1/248 kBProgress (1): 9.2/248 kBProgress (1): 13/248 kB Progress (1): 14/248 kBProgress (1): 16/248 kBProgress (1): 18/248 kBProgress (1): 21/248 kBProgress (1): 24/248 kBProgress (1): 26/248 kBProgress (1): 29/248 kBProgress (1): 30/248 kBProgress (1): 33/248 kBProgress (1): 36/248 kBProgress (1): 37/248 kBProgress (1): 40/248 kBProgress (1): 42/248 kBProgress (1): 43/248 kBProgress (1): 45/248 kBProgress (1): 48/248 kBProgress (1): 49/248 kBProgress (1): 52/248 kBProgress (1): 54/248 kBProgress (1): 56/248 kBProgress (1): 58/248 kBProgress (2): 58/248 kB | 1.0/425 kBProgress (2): 58/248 kB | 5.1/425 kBProgress (2): 58/248 kB | 9.2/425 kBProgress (2): 58/248 kB | 13/425 kB Progress (2): 58/248 kB | 14/425 kBProgress (2): 61/248 kB | 14/425 kBProgress (2): 64/248 kB | 14/425 kBProgress (2): 67/248 kB | 14/425 kBProgress (2): 68/248 kB | 14/425 kBProgress (2): 72/248 kB | 14/425 kBProgress (2): 73/248 kB | 14/425 kBProgress (2): 73/248 kB | 17/425 kBProgress (2): 73/248 kB | 21/425 kBProgress (2): 73/248 kB | 25/425 kBProgress (2): 73/248 kB | 29/425 kBProgress (2): 73/248 kB | 33/425 kBProgress (2): 73/248 kB | 37/425 kBProgress (2): 73/248 kB | 41/425 kBProgress (2): 73/248 kB | 42/425 kBProgress (2): 73/248 kB | 43/425 kBProgress (2): 74/248 kB | 43/425 kBProgress (2): 77/248 kB | 43/425 kBProgress (2): 80/248 kB | 43/425 kBProgress (2): 83/248 kB | 43/425 kBProgress (2): 86/248 kB | 43/425 kBProgress (2): 87/248 kB | 43/425 kBProgress (2): 87/248 kB | 45/425 kBProgress (2): 87/248 kB | 48/425 kBProgress (2): 87/248 kB | 51/425 kBProgress (2): 87/248 kB | 52/425 kBProgress (2): 87/248 kB | 54/425 kBProgress (2): 87/248 kB | 55/425 kBProgress (2): 87/248 kB | 56/425 kBProgress (2): 87/248 kB | 58/425 kBProgress (2): 87/248 kB | 59/425 kBProgress (2): 87/248 kB | 61/425 kBProgress (2): 87/248 kB | 62/425 kBProgress (2): 87/248 kB | 64/425 kBProgress (2): 87/248 kB | 67/425 kBProgress (2): 87/248 kB | 68/425 kBProgress (2): 87/248 kB | 71/425 kBProgress (2): 87/248 kB | 74/425 kBProgress (2): 87/248 kB | 77/425 kBProgress (2): 87/248 kB | 78/425 kBProgress (2): 87/248 kB | 81/425 kBProgress (2): 87/248 kB | 83/425 kBProgress (2): 87/248 kB | 86/425 kBProgress (2): 87/248 kB | 89/425 kBProgress (2): 87/248 kB | 90/425 kBProgress (2): 87/248 kB | 93/425 kBProgress (2): 87/248 kB | 96/425 kBProgress (2): 87/248 kB | 97/425 kBProgress (2): 87/248 kB | 99/425 kBProgress (2): 89/248 kB | 99/425 kBProgress (2): 91/248 kB | 99/425 kBProgress (2): 94/248 kB | 99/425 kBProgress (2): 97/248 kB | 99/425 kBProgress (2): 100/248 kB | 99/425 kBProgress (2): 102/248 kB | 99/425 kBProgress (2): 102/248 kB | 100/425 kBProgress (2): 102/248 kB | 103/425 kBProgress (2): 102/248 kB | 106/425 kBProgress (2): 102/248 kB | 109/425 kBProgress (2): 102/248 kB | 110/425 kBProgress (2): 102/248 kB | 113/425 kBProgress (2): 102/248 kB | 115/425 kBProgress (2): 102/248 kB | 116/425 kBProgress (3): 102/248 kB | 116/425 kB | 1.0/52 kBProgress (3): 102/248 kB | 116/425 kB | 5.1/52 kBProgress (3): 102/248 kB | 116/425 kB | 9.2/52 kBProgress (3): 102/248 kB | 116/425 kB | 13/52 kB Progress (3): 102/248 kB | 116/425 kB | 14/52 kBProgress (3): 102/248 kB | 118/425 kB | 14/52 kBProgress (3): 102/248 kB | 121/425 kB | 14/52 kBProgress (3): 102/248 kB | 125/425 kB | 14/52 kBProgress (3): 102/248 kB | 129/425 kB | 14/52 kBProgress (3): 102/248 kB | 133/425 kB | 14/52 kBProgress (3): 102/248 kB | 137/425 kB | 14/52 kBProgress (3): 102/248 kB | 141/425 kB | 14/52 kBProgress (3): 102/248 kB | 145/425 kB | 14/52 kBProgress (3): 102/248 kB | 149/425 kB | 14/52 kBProgress (3): 102/248 kB | 153/425 kB | 14/52 kBProgress (3): 102/248 kB | 158/425 kB | 14/52 kBProgress (3): 102/248 kB | 162/425 kB | 14/52 kBProgress (3): 102/248 kB | 163/425 kB | 14/52 kBProgress (3): 103/248 kB | 163/425 kB | 14/52 kBProgress (3): 107/248 kB | 163/425 kB | 14/52 kBProgress (3): 111/248 kB | 163/425 kB | 14/52 kBProgress (3): 115/248 kB | 163/425 kB | 14/52 kBProgress (3): 116/248 kB | 163/425 kB | 14/52 kBProgress (3): 116/248 kB | 167/425 kB | 14/52 kBProgress (3): 116/248 kB | 171/425 kB | 14/52 kBProgress (3): 116/248 kB | 172/425 kB | 14/52 kBProgress (3): 116/248 kB | 176/425 kB | 14/52 kBProgress (3): 116/248 kB | 178/425 kB | 14/52 kBProgress (3): 116/248 kB | 181/425 kB | 14/52 kBProgress (3): 116/248 kB | 181/425 kB | 18/52 kBProgress (3): 116/248 kB | 181/425 kB | 22/52 kBProgress (3): 116/248 kB | 181/425 kB | 26/52 kBProgress (3): 116/248 kB | 182/425 kB | 26/52 kBProgress (3): 116/248 kB | 183/425 kB | 26/52 kBProgress (3): 116/248 kB | 183/425 kB | 31/52 kBProgress (3): 116/248 kB | 185/425 kB | 31/52 kBProgress (3): 116/248 kB | 186/425 kB | 31/52 kBProgress (3): 116/248 kB | 188/425 kB | 31/52 kBProgress (3): 116/248 kB | 188/425 kB | 35/52 kBProgress (3): 116/248 kB | 188/425 kB | 39/52 kBProgress (3): 116/248 kB | 188/425 kB | 43/52 kBProgress (3): 116/248 kB | 188/425 kB | 43/52 kBProgress (3): 116/248 kB | 192/425 kB | 43/52 kBProgress (3): 116/248 kB | 196/425 kB | 43/52 kBProgress (3): 116/248 kB | 200/425 kB | 43/52 kBProgress (3): 116/248 kB | 204/425 kB | 43/52 kBProgress (3): 116/248 kB | 208/425 kB | 43/52 kBProgress (3): 116/248 kB | 212/425 kB | 43/52 kBProgress (3): 120/248 kB | 212/425 kB | 43/52 kBProgress (3): 122/248 kB | 212/425 kB | 43/52 kBProgress (3): 122/248 kB | 216/425 kB | 43/52 kBProgress (3): 122/248 kB | 217/425 kB | 43/52 kBProgress (3): 122/248 kB | 219/425 kB | 43/52 kBProgress (3): 122/248 kB | 220/425 kB | 43/52 kBProgress (3): 122/248 kB | 221/425 kB | 43/52 kBProgress (3): 122/248 kB | 224/425 kB | 43/52 kBProgress (3): 122/248 kB | 227/425 kB | 43/52 kBProgress (3): 122/248 kB | 229/425 kB | 43/52 kBProgress (3): 125/248 kB | 229/425 kB | 43/52 kBProgress (3): 128/248 kB | 229/425 kB | 43/52 kBProgress (3): 129/248 kB | 229/425 kB | 43/52 kBProgress (3): 131/248 kB | 229/425 kB | 43/52 kBProgress (3): 134/248 kB | 229/425 kB | 43/52 kBProgress (3): 135/248 kB | 229/425 kB | 43/52 kBProgress (3): 135/248 kB | 230/425 kB | 43/52 kBProgress (3): 135/248 kB | 233/425 kB | 43/52 kBProgress (3): 135/248 kB | 235/425 kB | 43/52 kBProgress (3): 135/248 kB | 236/425 kB | 43/52 kBProgress (3): 135/248 kB | 237/425 kB | 43/52 kBProgress (3): 135/248 kB | 239/425 kB | 43/52 kBProgress (3): 135/248 kB | 240/425 kB | 43/52 kBProgress (3): 135/248 kB | 242/425 kB | 43/52 kBProgress (3): 135/248 kB | 243/425 kB | 43/52 kBProgress (3): 135/248 kB | 245/425 kB | 43/52 kBProgress (3): 135/248 kB | 248/425 kB | 43/52 kBProgress (3): 135/248 kB | 249/425 kB | 43/52 kBProgress (3): 135/248 kB | 252/425 kB | 43/52 kBProgress (3): 135/248 kB | 255/425 kB | 43/52 kBProgress (3): 135/248 kB | 256/425 kB | 43/52 kBProgress (3): 135/248 kB | 259/425 kB | 43/52 kBProgress (3): 135/248 kB | 262/425 kB | 43/52 kBProgress (3): 135/248 kB | 264/425 kB | 43/52 kBProgress (3): 135/248 kB | 267/425 kB | 43/52 kBProgress (3): 135/248 kB | 270/425 kB | 43/52 kBProgress (3): 135/248 kB | 271/425 kB | 43/52 kBProgress (3): 135/248 kB | 274/425 kB | 43/52 kBProgress (3): 135/248 kB | 277/425 kB | 43/52 kBProgress (3): 135/248 kB | 278/425 kB | 43/52 kBProgress (3): 135/248 kB | 281/425 kB | 43/52 kBProgress (3): 135/248 kB | 283/425 kB | 43/52 kBProgress (3): 135/248 kB | 286/425 kB | 43/52 kBProgress (3): 135/248 kB | 289/425 kB | 43/52 kBProgress (3): 135/248 kB | 290/425 kB | 43/52 kBProgress (3): 135/248 kB | 293/425 kB | 43/52 kBProgress (3): 135/248 kB | 296/425 kB | 43/52 kBProgress (3): 135/248 kB | 297/425 kB | 43/52 kBProgress (3): 135/248 kB | 300/425 kB | 43/52 kBProgress (3): 135/248 kB | 304/425 kB | 43/52 kBProgress (3): 135/248 kB | 308/425 kB | 43/52 kBProgress (3): 135/248 kB | 309/425 kB | 43/52 kBProgress (3): 135/248 kB | 309/425 kB | 45/52 kBProgress (3): 135/248 kB | 309/425 kB | 46/52 kBProgress (3): 135/248 kB | 309/425 kB | 49/52 kBProgress (3): 135/248 kB | 313/425 kB | 49/52 kBProgress (3): 135/248 kB | 315/425 kB | 49/52 kBProgress (3): 135/248 kB | 316/425 kB | 49/52 kBProgress (3): 135/248 kB | 318/425 kB | 49/52 kBProgress (3): 135/248 kB | 319/425 kB | 49/52 kBProgress (3): 135/248 kB | 321/425 kB | 49/52 kBProgress (3): 135/248 kB | 322/425 kB | 49/52 kBProgress (3): 135/248 kB | 324/425 kB | 49/52 kBProgress (3): 135/248 kB | 324/425 kB | 52 kB   Progress (3): 135/248 kB | 325/425 kB | 52 kBProgress (3): 135/248 kB | 327/425 kB | 52 kBProgress (3): 135/248 kB | 328/425 kB | 52 kBProgress (3): 135/248 kB | 329/425 kB | 52 kBProgress (3): 135/248 kB | 332/425 kB | 52 kBProgress (3): 135/248 kB | 335/425 kB | 52 kBProgress (3): 137/248 kB | 335/425 kB | 52 kBProgress (3): 138/248 kB | 335/425 kB | 52 kBProgress (3): 140/248 kB | 335/425 kB | 52 kBProgress (3): 141/248 kB | 335/425 kB | 52 kBProgress (3): 143/248 kB | 335/425 kB | 52 kBProgress (3): 144/248 kB | 335/425 kB | 52 kBProgress (3): 146/248 kB | 335/425 kB | 52 kBProgress (3): 146/248 kB | 337/425 kB | 52 kBProgress (3): 146/248 kB | 338/425 kB | 52 kBProgress (3): 146/248 kB | 341/425 kB | 52 kBProgress (3): 146/248 kB | 344/425 kB | 52 kBProgress (3): 146/248 kB | 347/425 kB | 52 kBProgress (3): 146/248 kB | 348/425 kB | 52 kBProgress (3): 146/248 kB | 351/425 kB | 52 kBProgress (3): 146/248 kB | 355/425 kB | 52 kBProgress (3): 146/248 kB | 359/425 kB | 52 kBProgress (3): 146/248 kB | 360/425 kB | 52 kBProgress (3): 146/248 kB | 363/425 kB | 52 kBProgress (3): 146/248 kB | 367/425 kB | 52 kBProgress (3): 146/248 kB | 371/425 kB | 52 kBProgress (3): 146/248 kB | 375/425 kB | 52 kBProgress (3): 146/248 kB | 379/425 kB | 52 kBProgress (3): 146/248 kB | 384/425 kB | 52 kBProgress (3): 146/248 kB | 388/425 kB | 52 kBProgress (3): 146/248 kB | 392/425 kB | 52 kBProgress (3): 146/248 kB | 396/425 kB | 52 kBProgress (3): 146/248 kB | 400/425 kB | 52 kBProgress (3): 146/248 kB | 404/425 kB | 52 kBProgress (3): 146/248 kB | 407/425 kB | 52 kBProgress (3): 146/248 kB | 410/425 kB | 52 kBProgress (3): 146/248 kB | 411/425 kB | 52 kBProgress (3): 146/248 kB | 413/425 kB | 52 kBProgress (3): 146/248 kB | 414/425 kB | 52 kBProgress (3): 147/248 kB | 414/425 kB | 52 kBProgress (3): 148/248 kB | 414/425 kB | 52 kBProgress (3): 151/248 kB | 414/425 kB | 52 kBProgress (3): 151/248 kB | 416/425 kB | 52 kBProgress (3): 151/248 kB | 419/425 kB | 52 kBProgress (3): 151/248 kB | 420/425 kB | 52 kBProgress (3): 151/248 kB | 421/425 kB | 52 kBProgress (3): 151/248 kB | 425 kB | 52 kB    Progress (3): 155/248 kB | 425 kB | 52 kBProgress (3): 160/248 kB | 425 kB | 52 kBProgress (3): 164/248 kB | 425 kB | 52 kBProgress (3): 164/248 kB | 425 kB | 52 kBProgress (3): 169/248 kB | 425 kB | 52 kBProgress (3): 172/248 kB | 425 kB | 52 kBProgress (3): 173/248 kB | 425 kB | 52 kBProgress (3): 175/248 kB | 425 kB | 52 kBProgress (3): 176/248 kB | 425 kB | 52 kBProgress (3): 178/248 kB | 425 kB | 52 kBProgress (3): 181/248 kB | 425 kB | 52 kBProgress (3): 182/248 kB | 425 kB | 52 kBProgress (3): 183/248 kB | 425 kB | 52 kBProgress (3): 186/248 kB | 425 kB | 52 kBProgress (3): 188/248 kB | 425 kB | 52 kBProgress (3): 189/248 kB | 425 kB | 52 kBProgress (3): 191/248 kB | 425 kB | 52 kBProgress (3): 192/248 kB | 425 kB | 52 kBProgress (3): 194/248 kB | 425 kB | 52 kBProgress (3): 197/248 kB | 425 kB | 52 kBProgress (3): 201/248 kB | 425 kB | 52 kBProgress (3): 201/248 kB | 425 kB | 52 kBProgress (3): 202/248 kB | 425 kB | 52 kBProgress (3): 204/248 kB | 425 kB | 52 kBProgress (3): 207/248 kB | 425 kB | 52 kBProgress (3): 208/248 kB | 425 kB | 52 kBProgress (3): 210/248 kB | 425 kB | 52 kBProgress (3): 211/248 kB | 425 kB | 52 kBProgress (3): 213/248 kB | 425 kB | 52 kBProgress (3): 214/248 kB | 425 kB | 52 kBProgress (3): 217/248 kB | 425 kB | 52 kBProgress (3): 219/248 kB | 425 kB | 52 kBProgress (3): 220/248 kB | 425 kB | 52 kBProgress (3): 221/248 kB | 425 kB | 52 kBProgress (3): 223/248 kB | 425 kB | 52 kBProgress (3): 224/248 kB | 425 kB | 52 kBProgress (3): 227/248 kB | 425 kB | 52 kBProgress (3): 229/248 kB | 425 kB | 52 kBProgress (3): 230/248 kB | 425 kB | 52 kBProgress (3): 232/248 kB | 425 kB | 52 kBProgress (3): 233/248 kB | 425 kB | 52 kB                                         Downloaded: http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-aspects/4.0.9.RELEASE/spring-aspects-4.0.9.RELEASE.jar (52 kB at 84 kB/s)
+Progress (2): 235/248 kB | 425 kBProgress (2): 237/248 kB | 425 kBProgress (2): 240/248 kB | 425 kBProgress (2): 243/248 kB | 425 kBProgress (2): 245/248 kB | 425 kBProgress (2): 246/248 kB | 425 kBProgress (2): 248 kB | 425 kB                                 Downloaded: http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-jdbc/4.0.9.RELEASE/spring-jdbc-4.0.9.RELEASE.jar (425 kB at 643 kB/s)
+Downloaded: http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-tx/4.0.9.RELEASE/spring-tx-4.0.9.RELEASE.jar (248 kB at 300 kB/s)
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ app ---
+[INFO] com.yinmimoney.web:app:war:1.0.0-SNAPSHOT
+[INFO] +- com.yinmimoney.web:core:jar:1.0.0-SNAPSHOT:compile
+[INFO] |  +- org.springframework.data:spring-data-redis:jar:1.7.1.RELEASE:compile
+[INFO] |  |  +- org.springframework.data:spring-data-keyvalue:jar:1.1.1.RELEASE:compile
+[INFO] |  |  +- org.springframework:spring-oxm:jar:4.2.5.RELEASE:compile
+[INFO] |  |  \- org.springframework:spring-aop:jar:4.2.5.RELEASE:compile
+[INFO] |  |     \- aopalliance:aopalliance:jar:1.0:compile
+[INFO] |  +- redis.clients:jedis:jar:2.5.2:compile
+[INFO] |  |  \- org.apache.commons:commons-pool2:jar:2.0:compile
+[INFO] |  +- org.hibernate:hibernate-validator:jar:5.0.2.Final:compile
+[INFO] |  |  +- javax.validation:validation-api:jar:1.1.0.Final:compile
+[INFO] |  |  +- org.jboss.logging:jboss-logging:jar:3.1.1.GA:compile
+[INFO] |  |  \- com.fasterxml:classmate:jar:1.0.0:compile
+[INFO] |  +- commons-httpclient:commons-httpclient:jar:3.1:compile
+[INFO] |  |  \- commons-logging:commons-logging:jar:1.0.4:compile
+[INFO] |  \- org.web3j:core:jar:3.3.1:compile
+[INFO] |     +- org.web3j:abi:jar:3.3.1:compile
+[INFO] |     |  \- org.web3j:utils:jar:3.3.1:compile
+[INFO] |     |     \- org.bouncycastle:bcprov-jdk15on:jar:1.54:compile
+[INFO] |     +- org.web3j:crypto:jar:3.3.1:compile
+[INFO] |     |  +- org.web3j:rlp:jar:3.3.1:compile
+[INFO] |     |  \- com.fasterxml.jackson.core:jackson-databind:jar:2.8.5:compile
+[INFO] |     |     +- com.fasterxml.jackson.core:jackson-annotations:jar:2.8.0:compile
+[INFO] |     |     \- com.fasterxml.jackson.core:jackson-core:jar:2.8.5:compile
+[INFO] |     +- org.web3j:tuples:jar:3.3.1:compile
+[INFO] |     +- com.github.jnr:jnr-unixsocket:jar:0.15:compile
+[INFO] |     |  +- com.github.jnr:jnr-ffi:jar:2.1.2:compile
+[INFO] |     |  |  +- com.github.jnr:jffi:jar:1.2.14:compile
+[INFO] |     |  |  +- com.github.jnr:jffi:jar:native:1.2.14:runtime
+[INFO] |     |  |  +- org.ow2.asm:asm-commons:jar:5.0.3:compile
+[INFO] |     |  |  +- org.ow2.asm:asm-analysis:jar:5.0.3:compile
+[INFO] |     |  |  +- org.ow2.asm:asm-tree:jar:5.0.3:compile
+[INFO] |     |  |  +- org.ow2.asm:asm-util:jar:5.0.3:compile
+[INFO] |     |  |  \- com.github.jnr:jnr-x86asm:jar:1.0.2:compile
+[INFO] |     |  +- com.github.jnr:jnr-constants:jar:0.9.6:compile
+[INFO] |     |  +- com.github.jnr:jnr-enxio:jar:0.14:compile
+[INFO] |     |  \- com.github.jnr:jnr-posix:jar:3.0.33:compile
+[INFO] |     +- com.squareup.okhttp3:okhttp:jar:3.8.1:compile
+[INFO] |     |  \- com.squareup.okio:okio:jar:1.13.0:compile
+[INFO] |     +- com.squareup.okhttp3:logging-interceptor:jar:3.8.1:compile
+[INFO] |     \- io.reactivex:rxjava:jar:1.2.4:compile
+[INFO] +- org.mongodb:mongo-java-driver:jar:2.13.0-rc0:compile
+[INFO] +- org.springframework.data:spring-data-mongodb:jar:1.7.1.RELEASE:compile
+[INFO] |  +- org.springframework:spring-tx:jar:4.0.9.RELEASE:compile
+[INFO] |  +- org.springframework:spring-context:jar:4.0.9.RELEASE:compile
+[INFO] |  +- org.springframework:spring-beans:jar:4.0.9.RELEASE:compile
+[INFO] |  +- org.springframework:spring-core:jar:4.0.9.RELEASE:compile
+[INFO] |  +- org.springframework:spring-expression:jar:4.0.9.RELEASE:compile
+[INFO] |  +- org.springframework.data:spring-data-commons:jar:1.10.1.RELEASE:compile
+[INFO] |  \- org.slf4j:jcl-over-slf4j:jar:1.7.10:runtime
+[INFO] +- org.springframework.data:spring-data-mongodb-cross-store:jar:1.7.1.RELEASE:compile
+[INFO] |  +- org.springframework:spring-aspects:jar:4.0.9.RELEASE:compile
+[INFO] |  +- org.springframework:spring-orm:jar:4.0.9.RELEASE:compile
+[INFO] |  |  \- org.springframework:spring-jdbc:jar:4.0.9.RELEASE:compile
+[INFO] |  \- org.aspectj:aspectjrt:jar:1.8.5:compile
+[INFO] +- org.springframework.data:spring-data-mongodb-log4j:jar:1.7.1.RELEASE:compile
+[INFO] +- org.apache.geronimo.specs:geronimo-servlet_3.0_spec:jar:1.0:provided
+[INFO] +- cc.s2m.web.utils:webUtils:jar:20160314-SNAPSHOT:compile
+[INFO] |  +- cc.s2m:util:jar:20160314-SNAPSHOT:compile
+[INFO] |  |  +- com.belerweb:pinyin4j:jar:2.5.0:compile
+[INFO] |  |  +- org.apache.httpcomponents:httpclient:jar:4.5.2:compile
+[INFO] |  |  +- org.apache.httpcomponents:httpcore:jar:4.4.4:compile
+[INFO] |  |  +- org.apache.httpcomponents:httpmime:jar:4.5.2:compile
+[INFO] |  |  +- org.htmlparser:htmlparser:jar:2.1:compile
+[INFO] |  |  |  \- org.htmlparser:htmllexer:jar:2.1:compile
+[INFO] |  |  +- com.alibaba:fastjson:jar:1.2.8:compile
+[INFO] |  |  +- com.google.guava:guava:jar:19.0:compile
+[INFO] |  |  +- commons-io:commons-io:jar:2.4:compile
+[INFO] |  |  +- commons-beanutils:commons-beanutils:jar:1.9.2:compile
+[INFO] |  |  \- org.apache.commons:commons-collections4:jar:4.1:compile
+[INFO] |  +- org.springframework:spring-web:jar:4.2.4.RELEASE:compile
+[INFO] |  +- org.springframework:spring-webmvc:jar:4.2.4.RELEASE:compile
+[INFO] |  +- org.springframework:spring-context-support:jar:4.2.4.RELEASE:compile
+[INFO] |  +- org.apache.logging.log4j:log4j-core:jar:2.5:compile
+[INFO] |  +- org.apache.logging.log4j:log4j-api:jar:2.5:compile
+[INFO] |  +- org.apache.logging.log4j:log4j-jcl:jar:2.5:compile
+[INFO] |  +- org.apache.logging.log4j:log4j-web:jar:2.5:compile
+[INFO] |  +- mysql:mysql-connector-java:jar:5.1.38:compile
+[INFO] |  +- org.aspectj:aspectjweaver:jar:1.8.8:compile
+[INFO] |  +- org.mybatis:mybatis:jar:3.3.0:compile
+[INFO] |  +- org.mybatis:mybatis-spring:jar:1.2.3:compile
+[INFO] |  +- org.javassist:javassist:jar:3.20.0-GA:compile
+[INFO] |  +- com.alibaba:druid:jar:1.0.16:compile
+[INFO] |  |  +- com.alibaba:jconsole:jar:1.8.0:system
+[INFO] |  |  \- com.alibaba:tools:jar:1.8.0:system
+[INFO] |  +- org.freemarker:freemarker:jar:2.3.23:compile
+[INFO] |  +- commons-fileupload:commons-fileupload:jar:1.3.1:compile
+[INFO] |  +- org.apache.commons:commons-lang3:jar:3.4:compile
+[INFO] |  +- cglib:cglib:jar:3.2.0:compile
+[INFO] |  |  \- org.ow2.asm:asm:jar:5.0.3:compile
+[INFO] |  +- org.apache.ant:ant:jar:1.9.6:compile
+[INFO] |  |  \- org.apache.ant:ant-launcher:jar:1.9.6:compile
+[INFO] |  +- com.upyun:java-sdk:jar:3.1:compile
+[INFO] |  +- junit:junit:jar:4.12:compile
+[INFO] |  |  \- org.hamcrest:hamcrest-core:jar:1.3:compile
+[INFO] |  +- net.spy:spymemcached:jar:2.12.0:compile
+[INFO] |  \- org.apache.poi:poi-ooxml:jar:3.14:compile
+[INFO] |     +- org.apache.poi:poi-ooxml-schemas:jar:3.14:compile
+[INFO] |     |  \- org.apache.xmlbeans:xmlbeans:jar:2.6.0:compile
+[INFO] |     |     \- stax:stax-api:jar:1.0.1:compile
+[INFO] |     \- com.github.virtuald:curvesapi:jar:1.03:compile
+[INFO] +- com.sun.mail:javax.mail:jar:1.5.5:compile
+[INFO] +- javax.activation:activation:jar:1.1.1:compile
+[INFO] +- com.itextpdf:itextpdf:jar:5.5.8:compile
+[INFO] +- cc.s2m.utils:itextpdf_xmlworker_5.5.8:jar:0.0.1-SNAPSHOT:compile
+[INFO] +- com.itextpdf:itext-asian:jar:5.2.0:compile
+[INFO] +- org.apache.poi:poi:jar:3.13:compile
+[INFO] |  \- commons-codec:commons-codec:jar:1.9:compile
+[INFO] +- io.netty:netty-all:jar:4.1.6.Final:compile
+[INFO] +- com.google.code.gson:gson:jar:2.3:compile
+[INFO] +- org.slf4j:slf4j-api:jar:1.7.7:compile
+[INFO] +- org.slf4j:slf4j-log4j12:jar:1.7.7:compile
+[INFO] \- log4j:log4j:jar:1.2.17:compile
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO] 
+[INFO] parent ............................................. SUCCESS [  1.163 s]
+[INFO] core ............................................... SUCCESS [  0.262 s]
+[INFO] web ................................................ SUCCESS [  1.141 s]
+[INFO] quartz ............................................. SUCCESS [  0.097 s]
+[INFO] app ................................................ SUCCESS [  2.271 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 5.299 s
+[INFO] Finished at: 2019-06-12T10:15:31+08:00
+[INFO] Final Memory: 23M/309M
+[INFO] ------------------------------------------------------------------------
